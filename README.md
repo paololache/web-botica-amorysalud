@@ -37,3 +37,4 @@ npm run build   # build de producción
 - `lib/data.ts`: catálogo de productos y categorías. Para usar fotos reales, pon la imagen en `public/productos/` (800×800, WebP) y añade `image: "/productos/archivo.webp"` al producto; mientras tanto se dibuja el placeholder del design system.
 - `components/HeroCarousel.tsx`, `components/Sections.tsx`: textos de campañas, banners y fechas de vigencia.
 - Logo: cuando exista, reemplazar el componente `Logo` en `components/Header.tsx`.
+# web-botica-amorysalud
