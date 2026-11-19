@@ -1,0 +1,164 @@
+/* Tema "Botica Amor y Salud" sobre el design system de /external.
+   Web blanca; rojo y verde del logo. Se aplica después de tokens.css, bundle.css y globals.css. */
+
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  /* superficies: blanco puro y neutros cálidos */
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f5f7f4;
+  --ink: #1c2420;
+  --ink-muted: #5d6660;
+  --line: #e6ebe7;
+
+  /* verde del logo = acción (Agregar, Ver más, foco) */
+  --brand: #17773a;
+  --on-brand: #ffffff;
+  --brand-soft: #e8f5ec;
+  /* rojo del logo = identidad (barra superior, footer, campañas) */
+  --brand-deep: #c8202b;
+  --on-brand-deep: #ffffff;
+  --care: #17773a;
+  --on-care: #ffffff;
+  --care-soft: #e8f5ec;
+  /* dinero */
+  --promo: #d4202f;
+  --on-promo: #ffffff;
+  --promo-soft: #fdecec;
+  --highlight: #f5b82e;
+  --on-highlight: #1c2420;
+  --focus: #17773a;
+  --overlay: rgba(28, 20, 20, 0.55);
+
+  /* propios del tema */
+  --rose-soft: #fdf0ee;
+  --cream: #fff7e8;
+  --green-logo: #3fa35b;
+  --red-logo: #d42a2a;
+  --font-display: var(--font-fraunces), "Fraunces", Georgia, serif;
+
+  --shadow-card: 0 1px 2px rgba(28, 36, 32, 0.05), 0 6px 18px rgba(28, 36, 32, 0.05);
+  --shadow-hover: 0 2px 4px rgba(28, 36, 32, 0.06), 0 16px 34px rgba(28, 36, 32, 0.1);
+  color-scheme: light;
+}
+
+body { background: var(--surface); }
+
+/* ---------- Tipografía display (eco del serif de "Amor y Salud") ---------- */
+.mb-sechead h2, .mb-hero-title, .mb-campaign-title, .page-head h1, .pdp-title, .mb-wide-title, .mb-promo-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+.mb-sechead h2 { font-size: 30px; line-height: 36px; }
+.mb-hero-title { font-size: 44px; line-height: 48px; font-weight: 600; }
+.mb-hero-title em { font-style: italic; color: var(--brand-deep); }
+.mb-campaign-title { font-weight: 600; }
+
+/* Línea de latido bajo cada título de sección */
+.mb-sechead h2::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 14px;
+  margin-top: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 14' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M1 8h30l4-6 5 11 5-9 3 4h10' stroke='%23c8202b'/%3E%3Cpath d='M58 8h37' stroke='%233fa35b'/%3E%3C/svg%3E") no-repeat left center / contain;
+}
+
+/* ---------- Logo ---------- */
+.brand-logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; line-height: 1; }
+.brand-logo svg { width: 46px; height: 46px; flex: none; filter: drop-shadow(0 2px 4px rgba(200, 32, 43, .18)); }
+.brand-logo-text { display: flex; flex-direction: column; gap: 2px; }
+.brand-logo-text b { font-family: var(--font-sans); font-weight: 800; font-size: 22px; letter-spacing: .18em; color: var(--green-logo); }
+.brand-logo-text span { font-family: var(--font-display); font-weight: 500; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--brand-deep); }
+.brand-logo.is-inverse .brand-logo-text b { color: #ffffff; }
+.brand-logo.is-inverse .brand-logo-text span { color: #ffe3e3; }
+
+/* ---------- Cabecera blanca ---------- */
+.mb-announce.is-deep { background: var(--brand-deep); }
+.mb-utility { background: var(--surface-sunken); border-bottom: 0; color: var(--ink-muted); }
+.mb-utility strong { color: var(--brand-deep); }
+.utility-tagline { font-family: var(--font-display); font-style: italic; color: var(--brand); }
+.mb-header { background: var(--surface-raised); color: var(--ink); border-bottom: 1px solid var(--line); }
+.mb-header .mb-hdr-action b { color: var(--ink); }
+.mb-header .mb-hdr-action { color: var(--ink-muted); }
+.mb-header .mb-hdr-action .mb-ico { color: var(--brand); }
+.mb-header .mb-search { background: var(--surface-sunken); border-color: transparent; border-radius: var(--radius-pill); padding-left: 20px; }
+.mb-header .mb-search:focus-within { background: var(--surface-raised); border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-soft); }
+.mb-header .mb-search button { border-radius: 50%; }
+.mb-cart { width: 48px; height: 48px; border-radius: 50%; background: var(--brand-soft); }
+.mb-cart .mb-ico { color: var(--brand); }
+.site-header.is-compact { box-shadow: 0 6px 20px rgba(28, 36, 32, .08); }
+
+.mb-catnav { border-bottom: 1px solid var(--line); }
+.mb-chip { background: var(--surface-raised); }
+.mb-chip.is-menu { background: var(--brand-deep); border-color: var(--brand-deep); }
+.mb-chip-ico { background: var(--brand-soft); color: var(--brand); }
+
+/* ---------- Hero con corazón de fondo ---------- */
+.mb-hero { background: var(--rose-soft); }
+.mb-hero::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: -90px;
+  width: 340px;
+  height: 340px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 90C20 68 4 52 4 32 4 17 16 6 30 6c9 0 16 5 20 12 4-7 11-12 20-12 14 0 26 11 26 26 0 20-16 36-46 58z' fill='%23c8202b' opacity='.07'/%3E%3C/svg%3E") no-repeat center / contain;
+  pointer-events: none;
+}
+.mb-hero-copy { position: relative; }
+.mb-hero-kicker { color: var(--brand-deep); }
+.mb-hero-dots button { background: var(--ink); opacity: .2; }
+.mb-hero-dots button.on { background: var(--brand-deep); opacity: 1; }
+.mb-hero-art { border-radius: 0 var(--radius-xl) var(--radius-xl) 0; }
+.mb-hero-art::after { background: linear-gradient(90deg, var(--hero-bg, var(--rose-soft)), transparent 22%); }
+
+/* ---------- Tarjetas y bloques ---------- */
+.mb-card { border-color: var(--line); }
+.mb-card-media { border-radius: 14px; }
+.mb-benefit { background: var(--surface-raised); }
+.mb-benefit-ico { border-radius: 50%; }
+.cat-tile { background: linear-gradient(180deg, var(--surface-raised), var(--surface-sunken)); }
+.cat-tile-ico { background: var(--rose-soft); color: var(--brand-deep); }
+.cat-tile:hover { border-color: var(--brand-deep); }
+.mb-promo { background: var(--brand-soft); }
+.mb-promo.is-promo { background: var(--rose-soft); }
+.mb-wide { background: linear-gradient(110deg, var(--brand-deep) 0%, #a8151f 100%); }
+.mb-wide-title span { color: #ffe08a; }
+.mb-campaign { background: var(--brand-soft); }
+.mb-campaign-rail .mb-card { box-shadow: var(--shadow-card); }
+.mb-brand { background: var(--surface-sunken); border-color: transparent; }
+.store-info, .cart-summary { background: var(--surface-sunken); border-color: transparent; }
+
+/* ---------- Footer rojo con onda ---------- */
+.mb-footer { position: relative; margin-top: 96px; padding-top: var(--space-12); }
+.mb-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -47px;
+  height: 48px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 48' preserveAspectRatio='none'%3E%3Cpath d='M0 48V30C240 0 480 0 720 22s480 30 720 0v26z' fill='%23c8202b'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+}
+.mb-footer { padding-bottom: 96px; }
+.footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 18px; line-height: 24px; color: #ffe3e3; margin: 0; }
+.mb-pay span { color: var(--ink); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .mb-hero-art { border-radius: var(--radius-xl) var(--radius-xl) 0 0; }
+  .mb-hero-art::after { background: linear-gradient(0deg, var(--hero-bg, var(--rose-soft)), transparent 30%); }
+  .mb-hero-title { font-size: 34px; line-height: 38px; }
+  .utility-tagline { display: none; }
+}
+@media (max-width: 640px) {
+  .mb-sechead h2 { font-size: 24px; line-height: 30px; }
+  .mb-hero-title { font-size: 30px; line-height: 34px; }
+  .brand-logo svg { width: 40px; height: 40px; }
+  .brand-logo-text b { font-size: 18px; }
+  .brand-logo-text span { font-size: 12px; }
+  .mb-footer { margin-top: 72px; }
+}

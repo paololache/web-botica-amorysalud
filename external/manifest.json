@@ -1,0 +1,132 @@
+{
+  "manifestVersion": 3,
+  "name": "Mi Botica",
+  "namespace": "MiBotica",
+  "files": [
+    "Estructura-home.md",
+    "Imagenes.md",
+    "Modernizacion.md",
+    "components/AnnouncementBar/README.md",
+    "components/Badge/README.md",
+    "components/BenefitsBar/README.md",
+    "components/BrandStrip/README.md",
+    "components/Button/README.md",
+    "components/CampaignSplit/README.md",
+    "components/CategoryNav/README.md",
+    "components/Footer/README.md",
+    "components/Header/README.md",
+    "components/HeroCarousel/README.md",
+    "components/PriceTag/README.md",
+    "components/ProductCard/README.md",
+    "components/ProductRail/README.md",
+    "components/PromoBannerGrid/README.md",
+    "components/ReelsGrid/README.md",
+    "components/SearchField/README.md",
+    "components/SectionHeader/README.md",
+    "components/WhatsAppFab/README.md",
+    "components/WideBanner/README.md",
+    "components/bundle.css",
+    "components/bundle.js",
+    "components/index.d.ts",
+    "tokens.css"
+  ],
+  "libraries": [],
+  "components": [
+    {
+      "name": "Button",
+      "group": "Átomos",
+      "summary": "Botones de acción de la tienda. primary (azul brand) es \"Agregar\" y la acción principal de cada bloque; secondary para acciones alternativas; ghost para \"Ver m…"
+    },
+    {
+      "name": "Badge",
+      "group": "Átomos",
+      "summary": "Etiqueta corta sobre la foto del producto o junto al precio."
+    },
+    {
+      "name": "PriceTag",
+      "group": "Átomos",
+      "summary": "Precio en soles con dos decimales y números tabulares."
+    },
+    {
+      "name": "SearchField",
+      "group": "Átomos",
+      "summary": "Buscador del header."
+    },
+    {
+      "name": "AnnouncementBar",
+      "group": "Cabecera",
+      "summary": "Franja superior de 40px."
+    },
+    {
+      "name": "Header",
+      "group": "Cabecera",
+      "summary": "Cabecera completa en tres filas, como en la referencia: utility bar blanca (teléfono de pedidos, boticas, catálogo), barra principal en brand-deep (logo, busca…"
+    },
+    {
+      "name": "CategoryNav",
+      "group": "Cabecera",
+      "summary": "Fila de categorías bajo el header."
+    },
+    {
+      "name": "HeroCarousel",
+      "group": "Home",
+      "summary": "Carrusel principal, proporción ≈ 3.45:1 en desktop (1:1 o 4:5 en móvil)."
+    },
+    {
+      "name": "SectionHeader",
+      "group": "Home",
+      "summary": "Encabezado de cada bloque de la home."
+    },
+    {
+      "name": "BrandStrip",
+      "group": "Home",
+      "summary": "Fila de logos de marcas (10 en la referencia, bajo \"Cuidado para tu piel\")."
+    },
+    {
+      "name": "BenefitsBar",
+      "group": "Home",
+      "summary": "Bloque nuevo (no existe en la referencia): 4 beneficios de servicio bajo el hero, con icono en care-soft."
+    },
+    {
+      "name": "PromoBannerGrid",
+      "group": "Home",
+      "summary": "Banners de marca/oferta en grid de 2 columnas (2×2 en la referencia, 434×208 ≈ 2.08:1 cada uno)."
+    },
+    {
+      "name": "ProductCard",
+      "group": "Producto",
+      "summary": "La pieza central de la tienda."
+    },
+    {
+      "name": "ProductRail",
+      "group": "Producto",
+      "summary": "Carrusel horizontal de ProductCard con scroll-snap, siempre precedido de un SectionHeader."
+    },
+    {
+      "name": "WideBanner",
+      "group": "Home",
+      "summary": "Banner separador de ancho completo (910×153 ≈ 6:1 en la referencia), entre bloques de producto, cada dos secciones."
+    },
+    {
+      "name": "CampaignSplit",
+      "group": "Home",
+      "summary": "Bloque de campaña emocional (\"Lo esencial para estar preparado\", \"Amor y cuidado en cada momento\", \"Tu bienestar, burbuja a burbuja\")."
+    },
+    {
+      "name": "ReelsGrid",
+      "group": "Home",
+      "summary": "Última sección antes del footer: 3 videos verticales 9:16 (en la referencia, reels de marcas)."
+    },
+    {
+      "name": "Footer",
+      "group": "Pie",
+      "summary": "Mismo esquema de la referencia: tres columnas de links (Información · Servicios · Mi cuenta) + columna de marca con logo, redes, Libro de reclamaciones (obliga…"
+    },
+    {
+      "name": "WhatsAppFab",
+      "group": "Pie",
+      "summary": "Botón flotante fijo abajo a la derecha (24px de margen), en whatsapp, con sombra shadow-float."
+    }
+  ],
+  "assetGroups": []
+}

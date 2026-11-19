@@ -1,0 +1,156 @@
+/* Mi Botica — generated from tokens.json */
+:root, [data-theme="light"] {
+  --surface: #f6f8fb; /* Fondo de página. Reemplaza el blanco plano de la referencia por un gris azulado muy suave que separa las tarjetas. */
+  --surface-raised: #ffffff; /* Tarjetas de producto, header en scroll, modales, buscador. */
+  --surface-sunken: #eef2f8; /* Fondo de la foto de producto, inputs, zonas de carrusel. */
+  --ink: #0f1b3d; /* Texto principal y precios sobre surface, surface-raised y surface-sunken. */
+  --ink-muted: #56637f; /* Texto secundario: presentación del producto, precio tachado, textos legales de banners. Legible sobre surface y surface-raised en ambos temas. */
+  --line: #dce3ee; /* Bordes de tarjetas, divisores del footer, borde de inputs en reposo. */
+  --brand: #2347b8; /* Azul de marca (evolución del #344F9C de la referencia, más vivo). Botón Agregar, links 'Ver más', íconos activos, foco. */
+  --on-brand: #ffffff; /* Texto e íconos sobre fondo brand. */
+  --brand-deep: #13265f; /* Header principal y footer (en la referencia ambos eran #344F9C plano). Texto encima: on-brand-deep. */
+  --on-brand-deep: #ffffff; /* Texto sobre brand-deep (header, footer). */
+  --brand-soft: #e7edff; /* Chips de categoría, hover de tarjetas, fondo de íconos de categoría. Texto encima: brand. */
+  --care: #0b7a5e; /* Verde salud (nuevo). Disponibilidad, 'Envío gratis', atención farmacéutica, mensajes de éxito. Texto sobre care: on-care. */
+  --on-care: #ffffff; /* Texto sobre care. */
+  --care-soft: #e2f6ef; /* Fondo de badges de stock y del bloque de beneficios. Texto encima: care. */
+  --promo: #d6283a; /* Rojo de oferta (heredado del #D7121D de la referencia). SOLO descuentos (-30%), precio oferta y contador de carrito. Nunca decorativo. */
+  --on-promo: #ffffff; /* Texto sobre promo. */
+  --promo-soft: #fde8ea; /* Fondo de la barra de campaña y badges de oferta suaves. Texto encima: promo. */
+  --highlight: #f5b82e; /* Amarillo de campaña (BotiDays-style). Etiquetas 'Nuevo', '3x2', puntos activos del hero. Texto encima siempre ink claro (#0F1B3D). */
+  --on-highlight: #0f1b3d; /* Texto sobre highlight en ambos temas. */
+  --whatsapp: #1da851; /* Solo el botón flotante de WhatsApp. */
+  --focus: #2347b8; /* Anillo de foco de teclado, 2px con 2px de separación. */
+  --overlay: rgba(15, 27, 61, 0.55); /* Velo sobre fotos lifestyle para poner texto blanco encima (bloques de campaña). */
+  --shadow-card: 0 1px 2px rgba(15,27,61,0.06), 0 6px 20px rgba(15,27,61,0.06); /* Tarjeta en reposo. */
+  --shadow-hover: 0 2px 4px rgba(15,27,61,0.08), 0 14px 32px rgba(15,27,61,0.12); /* Tarjeta en hover (sube 2px). */
+  --shadow-float: 0 10px 30px rgba(15,27,61,0.25); /* Botón flotante WhatsApp, dropdown de categorías. */
+}
+[data-theme="dark"] {
+  --surface: #0e1424;
+  --surface-raised: #161e33;
+  --surface-sunken: #0a0f1c;
+  --ink: #eef2fa;
+  --ink-muted: #a3aec7;
+  --line: #2a3452;
+  --brand: #7c9bff;
+  --on-brand: #0e1424;
+  --brand-deep: #1b2a55;
+  --on-brand-deep: #eef2fa;
+  --brand-soft: #1d2a52;
+  --care: #4fd1a8;
+  --on-care: #0e1424;
+  --care-soft: #12352c;
+  --promo: #ff6b78;
+  --on-promo: #0e1424;
+  --promo-soft: #3a1820;
+  --highlight: #f5b82e;
+  --on-highlight: #0f1b3d;
+  --whatsapp: #25d366;
+  --focus: #9db4ff;
+  --overlay: rgba(5, 8, 16, 0.65);
+}
+:root {
+  --space-1: 4px; /* Separación icono-texto. */
+  --space-2: 8px; /* Gap de chips, padding de badges. */
+  --space-3: 12px; /* Gap entre tarjetas en móvil, padding interno de tarjeta. */
+  --space-4: 16px; /* Padding de tarjeta, gap entre tarjetas en desktop. */
+  --space-6: 24px; /* Gutter del contenedor, separación título-contenido. */
+  --space-8: 32px; /* Separación entre banners y carruseles. */
+  --space-12: 48px; /* Separación entre secciones de la home. */
+  --space-16: 64px; /* Padding vertical del footer. */
+  --radius-sm: 8px; /* Badges, inputs pequeños, imágenes dentro de tarjeta. */
+  --radius-md: 12px; /* Botones, buscador (la referencia usaba 12px en todo). */
+  --radius-lg: 20px; /* Tarjetas de producto, banners promo. */
+  --radius-xl: 28px; /* Hero, bloques de campaña. */
+  --radius-pill: 999px; /* Chips de categoría, logos de marca, contador de carrito, FAB. */
+  --font-sans: "Plus Jakarta Sans", "Poppins", system-ui, sans-serif;
+  --text-display: 800 44px/48px var(--font-sans); /* Texto grande de bloques de campaña ('Lo esencial para estar preparado'). */
+  --text-h1: 800 32px/40px var(--font-sans); /* Títulos de página (categoría, búsqueda). */
+  --text-h2: 700 26px/34px var(--font-sans); /* Título de sección de la home ('Cuidado para tu piel'). En la referencia: 28px/600 centrado. */
+  --text-h3: 700 18px/26px var(--font-sans); /* Títulos de columnas del footer, subtítulos. */
+  --text-body: 400 16px/24px var(--font-sans); /* Texto general. */
+  --text-product-name: 500 14px/20px var(--font-sans); /* Nombre de producto, máximo 2 líneas con elipsis. */
+  --text-body-sm: 400 14px/20px var(--font-sans); /* Links del footer, utility bar, ayudas. */
+  --text-caption: 400 12px/16px var(--font-sans); /* Textos legales bajo banners, presentación (Frasco 50 ml). */
+  --text-label: 700 12px/16px var(--font-sans); /* Badges (-30%, 3x2, Nuevo). Mayúsculas con 0.02em de tracking. */
+  --text-price: 800 22px/28px var(--font-sans); /* Precio actual en tarjeta (S/ 83.90). Tabular numbers. */
+  --text-price-old: 400 13px/18px var(--font-sans); /* Precio regular tachado en ink-muted. */
+}
+.display {
+  font-family: var(--font-sans);
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+.h1 {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+.h2 {
+  font-family: var(--font-sans);
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h3 {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.product-name {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.body-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.price {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+.price-old {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
